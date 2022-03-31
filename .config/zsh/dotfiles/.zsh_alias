@@ -1,0 +1,107 @@
+# Web browser aliases
+alias :w='$BROWSER'
+alias w='$BROWSER https://searx.org'
+
+# Editor aliases
+alias vi=$EDITOR
+alias nvim=$EDITOR
+alias :e=$EDITOR
+alias e=$EDITOR
+alias :de="$PERM $EDITOR"
+alias de="$PERM $EDITOR"
+
+# sudo/doas aliases
+alias sudo=$PERM
+alias :r=$PERM
+
+# fetch aliases
+alias btw=$FETCH
+
+# other
+alias yt='ytfzf'
+
+# ls aliases
+alias ls='$LIST -lah --color=auto'
+alias mix=$MIXER
+
+# get aliases
+alias getsfetch='rm sfetch ; curl -o sfetch https://raw.githubusercontent.com/speediegamer/sfetch/main/sfetch && chmod +x sfetch'
+alias getconfig='git clone https://github.com/speediegamer/configurations'
+alias getspderesources='rm spDE-resources ; git clone https://github.com/speediegamer/spDE-resources'
+alias getspde='rm spDE ; git clone https://github.com/speediegamer/spDE'
+alias getp081='rm p081 ; git clone https://github.com/p081/project081'
+
+# package installation/removal aliases
+alias :i=$PKGINSTALL
+alias :iu=$PKGREMOVE
+alias :id=$PKGCLEAN
+
+# list aliases
+alias :l='$LIST -lah --color=auto'
+alias ll='$LIST -lah | wc -l'
+alias :lb=$LISTDEVICE
+alias :ld=$DEVICEINFO
+
+# mixer aliases
+alias :a=$MIXER
+
+# General terminal command aliases
+alias Q='exit'
+alias :q='exit'
+alias q='exit'
+alias :c='clear'
+
+# Package manager aliases
+alias emerge='doas emerge'
+
+# make aliases
+alias make='make -j$(nproc)'
+
+# application
+alias rss='killall mpv ; killall newsboat ; newsboat'
+
+# Mount commands
+alias mnt='$PERM mount /dev/'
+
+# Process aliases
+alias kys='$PERM killall dwm'
+
+# "mk" aliases
+alias mkexec='chmod +x'
+alias mkdir='mkdir -pv'
+
+# youtube-dl/yt-dlp aliases
+alias mp3dl='$PERM youtube-dl -x --audio-format mp3 --prefer-ffmpeg'
+alias mp4dl='$PERM youtube-dl -f best --prefer-ffmpeg'
+
+# File aliases
+alias urls='$EDITOR ~/.config/newsboat/urls'
+alias bashrc='$EDITOR ~/.bashrc'
+alias zshrc='$EDITOR $ZDOTDIR/.zshrc'
+alias makeconf='$PERM $EDITOR /etc/portage/make.conf'
+
+# Basic cd aliases
+alias ..='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+# "GO" aliases
+alias goconfig="cd ~/.config"
+alias godl="cd ~/Downloads"
+alias gostor="cd /mnt/storage01"
+alias gostor2="cd /mnt/storage02"
+alias gobin="cd /usr/bin"
+alias gohome="cd ~/"
+alias golocal="cd /usr/local/bin"
+alias gorec="cd ~/OBS\ \Recordings"
+alias goproj="cd ~/Projects"
+
+# Funny aliases
+alias winget='echo "That OS is so 1984"'
+
+# Extraction aliases
+alias untar='$PERM tar xpvf'
+alias unrar='$PERM unrar x'
+#######################################################

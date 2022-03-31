@@ -1,0 +1,17 @@
+# Set color based on distro
+if [[ "$(</etc/os-release)" =~ "void" ]]; then
+    PS1col="[$(tput setf 3)$(whoami)$(tput setf 6)@$(tput setf 11)$(hostname)$(tput setf 4) %d$(tput sgr0)]$ "
+elif [[ "$(</etc/os-release)" =~ "gentoo" ]]; then
+    PS1col="[$(tput setf 3)$(whoami)$(tput setf 6)@$(tput setf 5)$(hostname)$(tput setf 4) %d$(tput sgr0)]$ "
+elif [[ "$(</etc/os-release)" =~ "arch" ]]; then
+    PS1col="[$(tput setf 3)$(whoami)$(tput setf 6)@$(tput setf 13)$(hostname)$(tput setf 4) %d$(tput sgr0)]$ "
+elif [[ "$(</etc/os-release)" =~ "artix" ]]; then
+    PS1col="[$(tput setf 3)$(whoami)$(tput setf 6)@$(tput setf 13)$(hostname)$(tput setf 4) %d$(tput sgr0)]$ "
+fi
+
+if [[ $LOGNAME = "root" ]]; then
+    export PS1col="[$(tput setf 4)$(whoami)$(tput setf 4)@$(tput setf 4)$(hostname)$(tput setf 4) %d$(tput sgr0)]$ "          
+fi
+
+export PS1=$PS1col
+
